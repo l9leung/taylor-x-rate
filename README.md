@@ -37,4 +37,4 @@ For the Canadian exchange rate, we reject the null at the $p=0.01$ level and for
 Since the $CW$ test statistic can be written as the sum of the $DMW$ test statistic plus a positive term, it is clear to see that the $CW$ test statistic will always be greater than the $DMW$ test statistic, giving it a different $p$-value for the same sample. For this reason, a lower $p$-value was obtained for the Clark-West test than the Diebold-Mariano-West test.
 
 ### References
-* Tanya Molodtsova, David H. Papell, Out-of-sample exchange rate predictability with Taylor rule fundamentals, Journal of International Economics, Volume 77, Issue 2, 2009, Pages 167-180, ISSN 0022-1996,
+* Tanya Molodtsova, David H. Papell, Out-of-sample exchange rate predictability with Taylor rule fundamentals, Journal of International Economics, Volume 77, Issue 2, 2009, Pages 167-180, ISSN 0022-1996, https://doi.org/10.1016/j.jinteco.2008.11.001. (http://www.sciencedirect.com/science/article/pii/S0022199608001256)
