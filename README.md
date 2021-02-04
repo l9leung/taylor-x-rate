@@ -34,5 +34,7 @@ Using the $DMW$ test, we fail to reject the null that the $MSPE$ from the Taylor
 
 For the Canadian exchange rate, we reject the null at the $p=0.01$ level and for the U.K. exchange rate, we reject the null at the $p=0.05$ level. Therefore we conclude that in this setting, the Taylor rule model has more predictive power than a random walk model.
 
-
 Since the $CW$ test statistic can be written as the sum of the $DMW$ test statistic plus a positive term, it is clear to see that the $CW$ test statistic will always be greater than the $DMW$ test statistic, giving it a different $p$-value for the same sample. For this reason, a lower $p$-value was obtained for the Clark-West test than the Diebold-Mariano-West test.
+
+### References
+* Tanya Molodtsova, David H. Papell, Out-of-sample exchange rate predictability with Taylor rule fundamentals, Journal of International Economics, Volume 77, Issue 2, 2009, Pages 167-180, ISSN 0022-1996,
