@@ -1,4 +1,4 @@
-### Exchange rate forecasting with the Taylor rule
+## Exchange rate forecasting with the Taylor rule
 
 ![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/forecasts.png?token=ARCDHBWLBGX75OH6PB26Y33ADN43I)
 
