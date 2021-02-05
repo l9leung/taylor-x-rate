@@ -1,5 +1,5 @@
 ## Exchange rate forecasting with the Taylor rule
-Replication and extension of some of the results from Molodtsova & Papell (2009). Read a summary [here](https://github.com/l9leung/taylor-x-rate/blob/main/report/report.pdf.
+Replication and extension of some of the results from Molodtsova & Papell (2009). Read a summary [here](https://github.com/l9leung/taylor-x-rate/blob/main/report/report.pdf).
 
 ![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/report/forecasts.png)
 
