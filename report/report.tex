@@ -40,7 +40,7 @@ We evaluate the performance of our forecasts with two statistical tests: the Die
 \begin{equation}
 DMW = \frac{\hat{\sigma}^2_{rw}-\hat{\sigma}^2_{l}}{\sqrt{\frac{1}{P}\hat{V}}} \sim N(0,1),
 \end{equation}
-where $\hat{\sigma}^2_{rw}$ is the prediction mean squared error $MSPE$ for a random walk model, $\hat{\sigma}^2_{l}$ is the $MSPE$ for the linear model we are testing, $P$ is the number of predictions, and $\hat{V}=\frac{1}{P}\sum^T_{t=T-P+1} ((s_{t+1}-s^{rw}_{t+1})^2-(s_{t+1}-s^{l}_{t+1})^2 - (\hat{\sigma}^2_{rw}-\hat{\sigma}^2_{l}))^2$, where $s_{t+1}$ and $s^{l}_{t+1}$ are the forecasted exchange rates from the random walk and linear model, respectively. The CW test statistic can be written as a function of the DMW test statistic, that is
+where $\hat{\sigma}^2_{rw}$ is the prediction mean squared error $MSPE$ for a random walk model, $\hat{\sigma}^2_{l}$ is the $MSPE$ for the linear model we are testing, $P$ is the number of predictions, and $\hat{V}=\frac{1}{P}\sum^T_{t=T-P+1} ((s_{t+1}-s^{rw}_{t+1})^2-(s_{t+1}-s^{l}_{t+1})^2 - (\hat{\sigma}^2_{rw}-\hat{\sigma}^2_{l}))^2$, where $s_{t+1}$ and $s^{l}_{t+1}$ are the forecasted exchange rates from the random walk and linear model, respectively. The $CW$ test statistic can be written as a function of the $DMW$ test statistic, that is
 \begin{equation}
 CW = DMW + \frac{1}{\sqrt{\frac{1}{P}\hat{V}}}\frac{1}{P}\sum^T_{t=T-P+1}(X'_{t+1}\hat{\beta}_t)^2 \sim N(0, 1),
 \end{equation}
