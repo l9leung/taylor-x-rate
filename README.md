@@ -1,6 +1,6 @@
 ## Exchange rate forecasting with the Taylor rule
 
-![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/forecasts.png?token=ARCDHBWLBGX75OH6PB26Y33ADN43I)
+![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/forecasts.png)
 
 The uncovered interest rate parity condition tells us that $$\frac{1+i}{1+\tilde{i}} = \frac{\hat{E}_{t+1}}{E_t}.$$ Then the difference of the logarithm of the two countries's interest rates must also be the expected one-period ahead change in the logarithm of the exchange rate. 
 $$log(1+i)-log(1+\tilde{i}) = log(\hat{E}_{t+1}) - log(E_t) \approx \%\Delta \hat{E}_{t+1}.$$
