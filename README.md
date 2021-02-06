@@ -6,7 +6,7 @@ Replication of some of the results from Molodtsova and Papell (2009) and implent
 ## Organization
 * `forecast.py`: functions to construct the rolling forecasts
 * `tests.py`: functions to statistically test the performance of forecasts
-* `replicate.ipynb`: Jupyter Notebook illustrating some of Molodtsova & Papell's results on CAD:USD and GBP:USD exchange rates using the data from their website
+* `replicate.ipynb`: Jupyter Notebook illustrating some of Molodtsova and Papell's results on CAD:USD and GBP:USD exchange rates using the data from their website
 
 #### Data
 The `/data` folder contains:
