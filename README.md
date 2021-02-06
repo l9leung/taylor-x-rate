@@ -1,5 +1,5 @@
 ## Exchange rate forecasting with the Taylor rule
-Replication of some of the results from Molodtsova & Papell (2009) and implentation of their methodology to current data. Read a summary [here](https://github.com/l9leung/taylor-x-rate/blob/main/report/report.pdf).
+Replication of some of the results from Molodtsova and Papell (2009) and implentation of their methodology to current data. Read a summary [here](https://github.com/l9leung/taylor-x-rate/blob/main/report/report.pdf).
 
 ![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/report/forecasts1.png)
 
@@ -12,7 +12,7 @@ Replication of some of the results from Molodtsova & Papell (2009) and implentat
 The `/data` folder contains:
 * `get.py`: functions to retrieve exchange rate and macroeconomic data from FRED and the IMF's International Financial Statistics database, respectively
 * `transform.py`: functions to transform the data for modeling
-* `Taylor rule fundamentals data.xls`: the original data from Molodtsova & Papell (2009) downloaded from the [author's website](https://uh.edu/~dpapell/Taylor%20rule%20fundamentals%20data.xls)
+* `Taylor rule fundamentals data.xls`: the original data from Molodtsova and Papell (2009) downloaded from the [author's website](https://uh.edu/~dpapell/Taylor%20rule%20fundamentals%20data.xls)
 * `Taylor rule fundamentals data.doc`: data description of the above data downloaded from the [author's website](https://uh.edu/~dpapell/Taylor%20rule%20fundamentals%20data.doc)
 
 ## References

@@ -32,7 +32,7 @@ i_t-i_t^*=w+w_{u\pi}\pi_t-w_{f\pi}\tilde{\pi}_t+w_{uy}y_t-w_{fy}\tilde{y}_t+w_{u
 where $\sim$ indicates foreign variables. 
 
 
-We use this specification to make one-month ahead forecasts of the CAD:USD and GBP:USD exchange rates. Rolling forecasts are initialized using 120 periods of monthly data starting January 1975 for Canada and March 1973 for the U.K.. At each step, a model is estimated using $OLS$ and the one-period ahead forecast is made. The first data point is then dropped, one data point is added at the end of the sample, and the process is repeated until forecasts for June 2006 are made.
+We use this specification to replicate the results of Molodtsova and Papell (2009) on one-month ahead forecasts of the CAD:USD and GBP:USD exchange rates. Rolling forecasts are initialized using 120 periods of monthly data starting January 1975 for Canada and March 1973 for the U.K. At each step, a model is estimated using $OLS$ and the one-period ahead forecast is made. The first data point is then dropped, one data point is added at the end of the sample, and the process is repeated until forecasts for June 2006 are made.
 
 
 We evaluate the performance of our forecasts with two statistical tests: the Diebold-Mariano-West test and the Clark-West test. The $DMW$ test statistic is
@@ -70,13 +70,16 @@ Using the $DMW$ test, we fail to reject the null that the $MSPE$ from the Taylor
 However, one criticism of the $DMW$ test is that it under-rejects the null that the coefficients in the linear model are equal to 0. If the coefficients in the linear model have nonzero coefficients, it would imply that it has some predictive power. Under the $CW$ test, the null and alternative hypotheses are
 \[\begin{split}
 H_0:& \beta = 0 \\
-H_1:& \beta \neq 0 \\
+H_1:& \beta \neq 0, \\
 \end{split}\]
-Using the $CW$ test, we reject the null that the Taylor rule model has no predictive for both CAD:USD and GBP:USD exchange rates. For the Canadian exchange rate, we reject the null at the $p=0.01$ level and for the U.K. exchange rate, we reject the null at the $p=0.05$ level. Therefore we conclude that in this setting, there is strong evidence in the predictability of interest rates using a model incorporating Taylor rule fundamentals.
+where $\beta$ are the coefficients in the linear model.
 
-\begin{figure}
+
+Using the $CW$ test, we reject the null that the Taylor rule model has no predictive ability for both CAD:USD and GBP:USD exchange rates. For the Canadian exchange rate, we reject the null at the $p=0.01$ level and for the U.K. exchange rate, we reject the null at the $p=0.05$ level. Therefore we conclude that in this setting, there is strong evidence in the short-term predictability of exchange rates using a model incorporating Taylor rule fundamentals.
+
+\begin{figure}[H]
 \centering
-\includegraphics{forecasts.png}
+\includegraphics{forecasts1.png}
 \end{figure}
 
 \end{document}
