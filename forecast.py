@@ -11,7 +11,8 @@ def rolling_forecasts(fundamentals):
     formula = fundamentals.columns[0] + "~" + "+".join(fundamentals.columns[1:].to_list())
 
     for t in range(120, len(fundamentals)):
-        # Fit symmetric Taylor Rule model with smoothing, heterogenous coefficients, constant term
+        # Fit symmetric Taylor Rule model with smoothing, heterogenous
+        # coefficients, constant term
         mod = ols(formula, data=fundamentals[t-120:t])
         res = mod.fit()
 

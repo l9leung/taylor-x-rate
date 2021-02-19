@@ -21,37 +21,34 @@ def main(targets):
     domestic = get_fundamentals("US")
     print("Retrieved domestic data")
     xrate = get_xrate(country)
-    
-    if "clean" not in targets:
-        fundamentals = pd.concat([xrate.iloc[:, 1], foreign, domestic], axis=1)
-        fundamentals.to_csv(country + "_cleaned.csv")
-        
-    if "clean" in targets:
-        print("Cleaning data...")
-        # Transform exchange rate
-        xrate["change"] = np.log(xrate.iloc[:, 0]/xrate.iloc[:, 0].shift(1)).shift(-1)
-        # Transform foreign data
-        foreign[f"infl_{country}"] = cpi_to_inflation(foreign[f"infl_{country}"])
-        foreign[f"y_{country}"] = output_gap(foreign[f"y_{country}"])
-        foreign[f"i_{country}"] = lag_rate(foreign[f"i_{country}"])
-        # Transform domestic data
-        domestic["infl_US"] = cpi_to_inflation(domestic["infl_US"])
-        domestic["y_US"] = output_gap(domestic["y_US"])
-        domestic["i_US"] = lag_rate(domestic["i_US"])
-        fundamentals = pd.concat([xrate.iloc[:, 1], foreign, domestic], axis=1)
-        fundamentals.to_csv(country + "_cleaned.csv")
-    
+
+    print("Cleaning data...")
+    # Transform exchange rate
+    xrate.iloc[:, 0] = np.log(xrate.iloc[:, 0])
+    xrate["change"] = xrate.iloc[:, 0].shift(-1) - xrate.iloc[:, 0]
+    # Transform foreign data
+    foreign[f"infl_{country}"] = cpi_to_inflation(foreign[f"infl_{country}"])
+    foreign[f"y_{country}"] = output_gap(foreign[f"y_{country}"])
+    foreign[f"i_{country}"] = lag_rate(foreign[f"i_{country}"])
+    # Transform domestic data
+    domestic["infl_US"] = cpi_to_inflation(domestic["infl_US"])
+    domestic["y_US"] = output_gap(domestic["y_US"])
+    domestic["i_US"] = lag_rate(domestic["i_US"])
+    fundamentals = pd.concat([xrate.iloc[:, 1], foreign, domestic], axis=1)
+    # fundamentals.to_csv(country + "_cleaned.csv")
+
     if "forecast" in targets:
         print("Forecasting...")
         # Make forecasts
         forecasts = rolling_forecasts(fundamentals.dropna())
         # Recover forecasted rate
         xrate["forecasted_change"] = forecasts
-        xrate["forecasted_rate"] = np.exp(xrate["forecasted_change"])*xrate.iloc[:, 0]
-        
+        xrate["forecasted_rate"] = xrate.iloc[:, 0] + xrate["forecasted_change"]
+        xrate = xrate.dropna()
+
         print("Evaluating...")
         # Test forecasts
-        DMW = dmw_test(xrate.iloc[:, [0, -1]].dropna())
+        DMW = dmw_test(xrate)
         print(DMW)
 
 

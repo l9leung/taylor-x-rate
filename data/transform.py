@@ -34,6 +34,6 @@ def output_gap(series):
 def lag_rate(series):
     """Retrieve lagged interest rates for smoothing."""
 
-    lagged = series.shift(-1)
+    lagged = series.shift(1)
 
     return lagged
