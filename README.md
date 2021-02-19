@@ -1,7 +1,7 @@
 ## Exchange rate forecasting with the Taylor rule
 Replication of some of the results from Molodtsova and Papell (2009) and implentation of their methodology to current data. Read a summary [here](https://github.com/l9leung/taylor-x-rate/blob/main/report/report.pdf).
 
-![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/report/forecasts1.png)
+![Alt text](https://raw.githubusercontent.com/l9leung/taylor-x-rate/main/forecasts.png)
 
 ## Organization
 * `forecast.py`: functions to construct the rolling forecasts
