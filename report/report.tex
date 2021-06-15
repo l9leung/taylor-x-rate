@@ -25,7 +25,7 @@ By using the Taylor Rule as an indicator of what a country's interest rate will 
 \begin{equation}
 i_t^* = \pi_t + \phi(\pi_t-\pi^*) + \gamma(y_t-\bar{y}_t) + r^*,
 \end{equation}
-where $i_t^*$ is the target short-term nominal interest rate, $\pi_t$ is the current inflation rate, $\pi^*$ is the target level of inflation, $y_t$ is the logarithm of real GDP, $\bar{y}_t$ is the logarithm of potential GDP, and $r^*$ is the equilibrium real interest rate. Since we do not expect interest rates to adjust according to the Taylor Rule immediately, we include each country's lagged interest rate $i_{t-1}$ as a covariate to "smooth out" the model. Assuming that the two countries have the same inflation target and neutral interest rate (symmetry), the model specification we obtain is
+where $i_t^*$ is the target short-term nominal interest rate, $\pi_t$ is the current inflation rate, $\pi^*$ is the target level of inflation, $y_t$ is the logarithm of real GDP, $\bar{y}_t$ is the logarithm of potential GDP, and $r^*$ is the equilibrium real interest rate. Since we do not expect interest rates to adjust according to the Taylor Rule immediately, we include each country's lagged interest rate $i_{t-1}$ as a covariate to ``smooth out" the model. Assuming that the two countries have the same inflation target and neutral interest rate (symmetry), the model specification we obtain is
 \begin{equation}
 i_t-i_t^*=w+w_{u\pi}\pi_t-w_{f\pi}\tilde{\pi}_t+w_{uy}y_t-w_{fy}\tilde{y}_t+w_{ui}i_{t-1}-w_{fi}\tilde{i}_{t-1}+\eta_t,
 \end{equation}
